@@ -65,11 +65,15 @@ Aplicar as mudanças:
 Confirme a execução digitando yes.
 
 
+
+
+
+
 # Continuação para deploy dos arquivos Helm
 
 📖 Documentação: Deploy do Nginx no Kubernetes com Helm e Kind
 
-## Este documento descreve como configurar e expor um serviço Nginx em um cluster Kubernetes utilizando Helm e Kind. Ele abrange desde a criação do cluster até a verificação dos serviços que foram criados.
+ Este documento descreve como configurar e expor um serviço Nginx em um cluster Kubernetes utilizando Helm e Kind. Ele abrange desde a criação do cluster até a verificação dos serviços que foram criados.
 
 # Criar um Cluster Kubernetes com Kind
 
