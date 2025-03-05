@@ -28,17 +28,17 @@ Habilitar versionamento para manter o histórico do state:
 
 # Inicializando o Terraform para deploy dos recursos
 
-1. # Criar a VPC
+1. ## Criar a VPC
 
   - Acesse a pasta vpc.
   - Execute os comandos do Terraform listados abaixo para criar a rede.
 
-2. # Obter e Configurar IDs
+2. ## Obter e Configurar IDs
 
   - Após a criação da VPC, obtenha os IDs da Subnet e do Security Group.
   - Atualize o arquivo main.tf localizado em modules/ec2, substituindo os valores apropriados.
 
-3. # Criar a Instância EC2
+3. ## Criar a Instância EC2
 
   - Retorne à raiz do projeto asap-tech-terraform.
   - Acesse a pasta ec2.
