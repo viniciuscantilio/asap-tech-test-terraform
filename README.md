@@ -63,3 +63,53 @@ Aplicar as mudanças:
     terraform apply
 
 Confirme a execução digitando yes.
+
+
+# Continuação para deploy dos arquivos Helm
+
+📖 Documentação: Deploy do Nginx no Kubernetes com Helm e Kind
+
+## Este documento descreve como configurar e expor um serviço Nginx em um cluster Kubernetes utilizando Helm e Kind. Ele abrange desde a criação do cluster até a verificação dos serviços que foram criados.
+
+# Criar um Cluster Kubernetes com Kind
+
+## Crie um cluster Kind chamado helm-cluster:
+
+Configurar o cluster com um Ingress Controller, crie um arquivo kind-config.yaml e rode:
+        
+    kind create cluster --name helm-cluster --config kind-config.yaml
+
+Verifique se o cluster está rodando:
+
+    kubectl cluster-info --context kind-helm-cluster
+
+# Criar o Helm Chart do Nginx
+Agora, vamos criar e organizar os arquivos corretamente:
+
+  Clone o projeto com os arquivos e deixe na seguinte estrutura.
+
+  asap-tech-test/
+ * Chart.yaml
+ * values.yaml
+ * **templates**/
+   * deployment.yaml
+
+
+Caso queira gerar um Helm Chart base:
+  
+    helm create asap-tech-test
+
+
+Implantar o Helm Chart no Cluster
+
+Agora, dentro da pasta nginx-chart, rode:
+
+    helm install my-nginx .
+
+Verifique se os pods estão rodando:
+
+    kubectl get pods
+ 
+ Verifique os serviços:
+ 
+    kubectl get svc
