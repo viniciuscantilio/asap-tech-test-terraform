@@ -92,23 +92,25 @@ Agora, vamos criar e organizar os arquivos corretamente:
 
   Clone o projeto com os arquivos e deixe na seguinte estrutura.
 
-  asap-tech-test/
+  asap-tech-test-terraform/helm-files/
  * Chart.yaml
  * values.yaml
  * **templates**/
    * deployment.yaml
+   * service.yaml
 
-
-Caso queira gerar um Helm Chart base:
-  
-    helm create asap-tech-test
 
 
 Implantar o Helm Chart no Cluster
 
-Agora, dentro da pasta nginx-chart, rode:
+Agora, dentro da pasta **helm-files**, rode:
 
-    helm install my-nginx .
+    helm install my-nginx . --namespace default
+
+Se quiser usar outra imagem (ex: Redis), pode sobrescrever os valores com --set:
+
+    helm install my-redis . --set image.repository=redis --set image.tag=latest
+
 
 Verifique se os pods estão rodando:
 
