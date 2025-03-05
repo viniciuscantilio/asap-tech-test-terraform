@@ -40,7 +40,7 @@ Habilitar versionamento para manter o histórico do state:
 
 3. ## Criar a Instância EC2
 
-  - Retorne à raiz do projeto asap-tech-terraform.
+  - Retorne à raiz do projeto **asap-tech-terraform**.
   - Acesse a pasta ec2.
   - Execute os comandos do Terraform listados abaixo para provisionar a instância.
    
